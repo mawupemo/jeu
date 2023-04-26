@@ -1,0 +1,67 @@
+<html class="all">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleslog.css"/> 
+   <script src="login.js"></script>
+    <title>login</title>
+</head>
+<body>
+    <div><h2><span>Lalao Vintana</span></h2></div>
+    <form>
+
+    <div>
+        <img src="images/roue.png" class="ima">
+    </div>
+    <div class="input">
+        <div>
+            <img src="images/user.png" class="im">
+        </div>
+       
+        <input type="text" tb_nom placeholder="Nom d'utilisateur" class="nom" id="name"/>
+    </div>
+    <div class="input">
+        <div>
+            <img src="images/email.png" class="im">
+        </div>
+        <input type="mail" tb_nom placeholder="E_mail" class="mail" id="maill"/>
+    </div>
+    <div class="input">
+        <div>
+            <img src="images/padlock.png"  class="im">
+        </div>
+        <input type="password" id="pass" name="pass" tb_nom placeholder="Mot de passe"/>
+        <img src="images/invisible.png" id="eye" onclick="changer()"/>
+    </div>
+    <script> 
+    e=true;
+        function changer(){
+            if(e){
+                document.getElementById("pass").setAttribute("type","text");;
+                document.getElementById("eye").src="images/eye.png";
+                e=false;
+            }
+            else{
+                document.getElementById("pass").setAttribute("type","password");
+                document.getElementById("eye").src="images/invisible.png";
+                e=true;
+            }
+        }
+        </script>
+   
+    <input class="btn" type="button" name="" value="Manomboka" id="btn"><a href="index.html"></a>
+    <script>
+        btn.addEventListener('click',()=>{
+           if ((document.getElementById('name').value=="")||(document.getElementById('maill').value=="")||(document.getElementById('pass').value=="")){
+            alert('Veuillez remplir toutes les informations pour commencer le jeu');
+           }
+            else{
+                location.replace('index.html')
+            }
+       });
+    </script>
+     
+</form>
+</body>
+</html>
